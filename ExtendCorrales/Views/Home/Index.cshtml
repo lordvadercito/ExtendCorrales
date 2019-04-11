@@ -1,0 +1,157 @@
+﻿
+
+@model ModelViewTropa
+
+<div class="container-fluid">
+    <br />
+    <div class="card align-middle">
+        <div class="card-header">
+            Corrales
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Condiciones generales de la tropa</h5>
+            <form>
+                @Html.AntiForgeryToken()
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="tropaId">Nro. Tropa</label>
+                            <select name="tropaId" id="tropaId" class="form-control form-control-md">
+                                @foreach (var item in Model.List)
+                                {
+                                    <option value="@item.TropaId">@item.TropaNro</option>
+                                }
+                            </select>
+                        </div>
+                        <input type="hidden" name="nroTropa" id="nroTropa" />
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="fechaLlegada">Fecha de llegada</label>
+                            <input type="text" id="fechaLlegada" name="fechaLlegada" class="form-control" readonly placeholder="Fecha de Llegada">
+                        </div>
+                        <input type="hidden" name="fechaLlegadaHidden" id="fechaLlegadaHidden" />
+                        <input type="hidden" name="horaLlegadaHidden" id="horaLlegadaHidden" />
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="condicionLlegada">Condición de llegada</label>
+                            <select name="condicionLlegada" id="condicionLlegada" class="form-control form-control-md">
+                                <option value="Lleno">Lleno</option>
+                                <option value="Desbastado">Desbastado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="corral">Corral</label>
+                            <select name="corral" id="corral" class="form-control form-control-md">
+                                @for (int i = 1; i <= 26; i++)
+                                {
+                                    <option value="@i">Corral @i</option>
+                                }
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="raza">Raza</label>
+                            <select name="raza" id="raza" class="form-control form-control-md">
+                                <option value="Aberdeen Angus">Aberdeen Angus</option>
+                                <option value="Belted Galloway">Belted Galloway</option>
+                                <option value="Blonde d''aquitaine">Blonde d''aquitaine</option>
+                                <option value="Bobino Criollo">Bobino Criollo</option>
+                                <option value="Braford">Braford</option>
+                                <option value="Brahman">Brahman</option>
+                                <option value="Grangus">Grangus</option>
+                                <option value="Charolais">Charolais</option>
+                                <option value="Hereford">Hereford</option>
+                                <option value="Holando Argentino">Holando Argentino</option>
+                                <option value="Jersey">Jersey</option>
+                                <option value="Limangus">Limangus</option>
+                                <option value="Limuosin">Limuosin</option>
+                                <option value="Piemontese">Piemontese</option>
+                                <option value="Polled Hereford">Polled Hereford</option>
+                                <option value="Retinta">Retinta</option>
+                                <option value="Santa Gertrudis">Santa Gertrudis</option>
+                                <option value="Shorthorn">Shorthorn</option>
+                                <option value="Flieckvieh Simmental">Flieckvieh Simmental</option>
+                                <option value="West Highland">West Highland</option>
+                                <option value="Cruza">Cruza</option>
+                                <option value="Overo">Overo</option>
+                                <option value="Mestizo">Mestizo</option>
+                                <option value="Quartino">Quartino</option>
+                                <option value="Varios">Varios</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="categoria">Categoría</label>
+                            <select name="categoria" id="categoria" class="form-control form-control-md">
+                                <option value="Novillo">Novillo</option>
+                                <option value="Novillito">Novillito</option>
+                                <option value="Ternero H">Ternero H</option>
+                                <option value="Ternero M">Ternero M</option>
+                                <option value="Toro">Toro</option>
+                                <option value="Vaca">Vaca</option>
+                                <option value="Vaquillona">Vaquillona</option>
+                                <option value="Macho entero joven">Macho entero joven</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="edad">Edad</label>
+                            <select name="edad" id="edad" class="form-control form-control-md">
+                                <option value="Joven">Joven</option>
+                                <option value="Viejo">Viejo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="pesoGeneral">Peso General</label>
+                            <select name="pesoGeneral" id="pesoGeneral" class="form-control form-control-md">
+                                <option value="Parejo">Parejo</option>
+                                <option value="Desparejo">Desparejo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="estadoGeneral">Estado General</label>
+                            <select name="estadoGeneral" id="estadoGeneral" class="form-control form-control-md">
+                                <option value="Faltón">Faltón</option>
+                                <option value="Terminado">Terminado</option>
+                                <option value="Pasado">Pasado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row" id="status">
+                    <div class="col text-center" id="success" role="alert">
+                        <p style="color:#029e3b;">Datos guardados con éxito</p>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-row float-right">
+                    <button type="submit" id="save" class="btn btn-primary" onclick="SaveData(event);">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br />
+</div>
+
+
