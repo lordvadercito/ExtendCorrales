@@ -27,3 +27,4 @@ C:\Users\aducca\source\repos\ExtendCorrales\ExtendCorrales\obj\Release\netcoreap
 C:\Users\aducca\source\repos\ExtendCorrales\ExtendCorrales\obj\Release\netcoreapp2.2\ExtendCorrales.dll
 C:\Users\aducca\source\repos\ExtendCorrales\ExtendCorrales\obj\Release\netcoreapp2.2\ExtendCorrales.pdb
 C:\Users\aducca\source\repos\ExtendCorrales\ExtendCorrales\obj\Release\netcoreapp2.2\ExtendCorrales.csproj.CopyComplete
+C:\Users\aducca\source\repos\ExtendCorrales\ExtendCorrales\obj\Release\netcoreapp2.2\ExtendCorrales.csprojAssemblyReference.cache
